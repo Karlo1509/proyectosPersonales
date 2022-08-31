@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de consumo</title>
+</head>
+<body>
+    <h3>¿Alcohol o gasolina?</h3>
+    <script>
+        function saltarLinea() {
+            document.write("<br><br><br><hr>")
+        }
+        function imprimir(msg) {
+            document.write("<big>Nuestra diferencia de edad es " + msg + "</big>")
+            saltarLinea()
+        }
+        var edadkarlo = 19
+        var edadDiego = 26
+        imprimir(edadkarlo-edadDiego) 
+        var litroscarro= 40
+        var kmrecorridos= 480
+        imprimir("la eficiencia del carro con gasolina es de "+ Math.round(kmrecorridos/litroscarro)+ " Km por litro")
+        kmrecorridos=300
+        imprimir("la eficiencia del carro con alcohol es de "+ Math.round(kmrecorridos/litroscarro)+ " Km por litro")
+    </script>
+</body>
+</html>

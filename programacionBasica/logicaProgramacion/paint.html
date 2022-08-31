@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint</title>
+</head>
+<body>
+    <canvas width="600" height="400"> </canvas>
+
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");    
+    pincel.fillStyle = "grey";
+    pincel.fillRect(0,0,600,400); 
+    var colores = ["blue","red","green","yellow","orange"]
+    var base = 50
+    var altura = 50
+    function dibujarRectangulo(x, y, base, altura, color) {
+        pincel.fillStyle=color;
+        pincel.fillRect(x,y, base, altura);
+        pincel.strokeStyle="black";
+        pincel.strokeRect(x,y, base, altura);
+    }
+    function todosColoresRectangulos(){
+        i = 0
+        while (i < colores.length){
+            dibujarRectangulo(base*i,0,base,altura,colores[i])
+            i++
+        }
+    }
+    function habilitarDibujar(){
+        puedoPintar = true
+    }
+    function deshabilitarDibujar(){
+        puedoPintar = false
+    }
+    var colorDibujo = "blue"
+    function colorEscogido(evento){
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+        if( (y < altura) &&
+            (y > 0) ){
+            var i = 0    
+            while (i < colores.length){
+                if (( x < base * (i+1)) &&
+                (x > base * i) ){
+                    colorDibujo = colores[i]
+                    break
+                }
+                i++
+            }    
+        }
+    }
+    var puedoPintar = false
+    function dibujarCirculo(evento){
+            if (puedoPintar == true){ 
+            var x = evento.pageX - pantalla.offsetLeft;
+            var y = evento.pageY - pantalla.offsetTop;
+            pincel.fillStyle = colorDibujo;
+            pincel.beginPath();
+            pincel.arc(x,y,10,0,2*3.14);
+            pincel.fill();
+            console.log(x + "," + y);        
+        }
+    }
+        
+        todosColoresRectangulos()
+        pantalla.onclick = colorEscogido ;
+        pantalla.onmousemove = dibujarCirculo ;
+        pantalla.onmousedown = habilitarDibujar ;
+        pantalla.onmouseup = deshabilitarDibujar ;
+</script> 
+</body>
+</html>

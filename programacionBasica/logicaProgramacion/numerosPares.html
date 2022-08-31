@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeros Pares</title>
+</head>
+<body>
+    <h1>Bienvenidos a la fiesta de los numeros pares</h1>
+    <script>
+        function saltarLinea() {
+            document.write("<br><br>")
+        }
+        function imprimir(msg) {
+            document.write(msg)
+            saltarLinea()
+        }
+        var numInicial = 1
+        var numFinal = parseInt(prompt("Hasta que numero deseas ver los pares?"))
+        imprimir("los numeros pares son:")
+        while (numInicial <= numFinal) {
+            if (numInicial % 2 == 0) {
+                imprimir(numInicial)
+            }
+            numInicial = numInicial + 1
+        }
+    </script>
+</body>
+</html>
