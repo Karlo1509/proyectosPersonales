@@ -14,6 +14,7 @@ header {
     height: 70px;
     display: flex;
     align-items: center;
+    background: linear-gradient(250deg, rgba(10,25,51,1) 0%, rgba(10,25,51,1) 40%, rgba(15,46,93,1) 70%, rgb(126, 37, 144) 90%, rgb(209, 44, 113) 100%);
 }
 
 .identidad{
@@ -29,6 +30,7 @@ header {
 .identidad h1{
     padding: 0 5px 0 0;
     font-size: 28px;
+    color: #F3F5FC;
 }
 
 nav{
@@ -50,7 +52,7 @@ nav a {
 	z-index: 1;
     font-size: 16px;
     text-transform: uppercase;
-    color: #000000;
+    color: #F3F5FC;
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
@@ -60,10 +62,10 @@ nav ul li:nth-child(1){
 	height: 100%;
 	transition: all .5s ease 0s;
 	border-radius: 10px;
-    background-color: #ccd7fde2;
+    background-color: rgb(26, 64, 120);
 }
 nav ul li:nth-child(2){
-	border-right: 4px solid #030220;
+	border-right: 4px solid #F3F5FC;
 }
 
 nav ul li:nth-child(2):hover{
@@ -72,7 +74,7 @@ nav ul li:nth-child(2):hover{
 	border-radius: 10px;
 	width: 33%;
     text-decoration: underline;
-	background-color: #68dcc5cb;
+	background-color: rgb(28, 79, 155);
 }
 nav ul li:nth-child(3):hover{
 	height: 100%;
@@ -80,7 +82,7 @@ nav ul li:nth-child(3):hover{
 	border-radius: 10px;
 	width: 33%;
     text-decoration: underline;
-	background-color: #68dcc5cb;
+	background-color: rgb(28, 79, 155);
 }
 
 .principal {
@@ -95,7 +97,8 @@ nav ul li:nth-child(3):hover{
     text-align: center;
     font-size: 24px;
     padding: 10px 0 ;
-    border: 2px solid #040e48;
+    border: 2px solid #040e4891;
+    ;
     border-radius: 10px;
 }
 
@@ -129,7 +132,7 @@ nav ul li:nth-child(3):hover{
 footer{
     width: 100%;
     height: max-content;
-    background-color: rgba(10,25,51,1);
+    background: linear-gradient(rgba(10,25,51,1) 0%, rgba(10,25,51,1) 40%, rgba(15,46,93,1) 70%, rgba(16,55,112,1) 90%, rgba(14,80,166,1) 100%);
 }
 
 .redes{
