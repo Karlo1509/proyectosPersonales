@@ -1,0 +1,142 @@
+html{
+    box-sizing: border-box;
+}
+
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #F3F5FC;
+}
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.identidad{
+    width: 320px;
+    height: 100%;
+    margin: 0 1.5em;
+    display: flex;
+    align-items: center;
+}
+.identidad img{
+    width: 50px;
+}
+.identidad h1{
+    padding: 0 5px 0 0;
+    font-size: 28px;
+}
+
+nav{
+    width: 500px;
+    align-items: center;
+    position: absolute;
+    align-items: center;
+    right: 0;
+}
+nav li {
+    vertical-align: middle;
+    display: inline-block;
+    width: 32.5%;
+    font-size: 24px;
+    text-align: center;
+}
+
+
+nav a {
+	z-index: 1;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav ul li:nth-child(1){
+	height: 100%;
+	transition: all .5s ease 0s;
+	border-radius: 10px;
+    background-color: #ccd7fde2;
+}
+nav ul li:nth-child(2){
+	border-right: 5px solid #000000;
+}
+
+nav ul li:nth-child(2):hover{
+	height: 100%;
+	transition: all .5s ease 0s;
+	border-radius: 10px;
+	width: 33%;
+    text-decoration: underline;
+	background-color: #68dcc5cb;
+}
+nav ul li:nth-child(3):hover{
+	height: 100%;
+	transition: all .5s ease 0s;
+	border-radius: 10px;
+	width: 33%;
+    text-decoration: underline;
+	background-color: #68dcc5cb;
+}
+
+.principal {
+    width: 75%;
+    margin: 30px auto;
+    background-color: rebeccapurple;
+}
+
+.titulo-principal {
+    display: inline-block;
+    text-align: center;
+    width: 45%;
+    vertical-align: top;
+    padding: 30px 0;
+    font-size: 3em;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.intercambiar {
+    height: 100%;
+    align-items: center;
+}
+
+
+footer{
+    width: 100%;
+    height: max-content;
+    background-color: rgba(10,25,51,1);
+}
+
+.redes{
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.redes a img{
+    width: 40px;
+    padding-right: 1em;
+}
+
+.redes a img:hover{
+    position: relative;
+    bottom: 2px;
+    transition: all 2s ease-in;
+}
+
+.copyright{
+    color: #F3F5FC;
+    letter-spacing: .08em ;
+    font-size: 12px;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
