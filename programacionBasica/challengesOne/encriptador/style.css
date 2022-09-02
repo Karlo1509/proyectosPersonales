@@ -35,7 +35,6 @@ nav{
     width: 500px;
     align-items: center;
     position: absolute;
-    align-items: center;
     right: 0;
 }
 nav li {
@@ -64,7 +63,7 @@ nav ul li:nth-child(1){
     background-color: #ccd7fde2;
 }
 nav ul li:nth-child(2){
-	border-right: 5px solid #000000;
+	border-right: 4px solid #030220;
 }
 
 nav ul li:nth-child(2):hover{
@@ -86,25 +85,44 @@ nav ul li:nth-child(3):hover{
 
 .principal {
     width: 75%;
-    margin: 30px auto;
-    background-color: rebeccapurple;
+    margin: 20px auto;
+    align-items: center;
+    display: flex;  
 }
 
 .titulo-principal {
-    display: inline-block;
+    width: 48%;
     text-align: center;
-    width: 45%;
-    vertical-align: top;
-    padding: 30px 0;
-    font-size: 3em;
-    box-sizing: border-box;
-    border: 2px solid #000000;
+    font-size: 24px;
+    padding: 10px 0 ;
+    border: 2px solid #040e48;
     border-radius: 10px;
 }
 
 .intercambiar {
-    height: 100%;
+    width: 40px;
     align-items: center;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+.intercambiar:hover{
+    opacity: 0.7;
+
+}
+
+.panel{
+    width: 75%;
+    margin: 0 auto;
+    position: relative;
+}
+.panel textarea{
+    width: 48%;
+    height: 269px;
+}
+.panel textarea:nth-child(2){
+    position: absolute;
+    right: 0;
 }
 
 
@@ -122,7 +140,7 @@ footer{
 }
 
 .redes a img{
-    width: 40px;
+    width: 50px;
     padding-right: 1em;
 }
 
