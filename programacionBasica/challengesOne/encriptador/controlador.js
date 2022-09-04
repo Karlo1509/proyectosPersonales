@@ -1,6 +1,3 @@
-
-    
-
 window.onload= function(){
     var caja1 = document.getElementById("caja1")
     var intercambiar = document.getElementById("intercambiar")
@@ -17,12 +14,17 @@ function actualizar() {
     var texto2 = document.getElementById("texto2")
     var intercambiar = document.getElementById("intercambiar")
     if (caja1 != ""){
+        caja2.style.backgroundImage = "none"
         if (texto1.textContent == "Desencriptado"){
             caja2.value = encriptar()
         }
         if (texto1.textContent == "Encriptado"){
             caja2.value = desencriptar()
         }
+    }
+    if (caja1.value == ""){
+        console.log("hola")
+        caja2.style.backgroundImage = 'url("imagenes/nohay.png")';
     }
 }
 
