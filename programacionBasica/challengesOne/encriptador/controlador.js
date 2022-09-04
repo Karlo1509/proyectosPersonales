@@ -1,10 +1,11 @@
 window.onload= function(){
     var caja1 = document.getElementById("caja1")
     var intercambiar = document.getElementById("intercambiar")
+    var copiar=document.getElementById("copiar")
     caja1.focus()
     caja1.onkeyup = (actualizar)
-    intercambiar.onclick = function click(){intercambio();actualizar()}
-    
+    intercambiar.onclick = function (){intercambio();actualizar()}
+    copiar.onclick = function (){copiarTexto();actualizar()}
 } 
     
 function actualizar() {
@@ -23,8 +24,7 @@ function actualizar() {
         }
     }
     if (caja1.value == ""){
-        console.log("hola")
-        caja2.style.backgroundImage = 'url("imagenes/nohay.png")';
+        caja2.style.backgroundImage = 'url("imagenes/nohay.png")'
     }
 }
 
@@ -67,3 +67,15 @@ function intercambio() {
     caja1.focus()
 }
 
+function copiarTexto(){
+    var caja1 = document.getElementById("caja1")
+    var caja2 = document.getElementById("caja2")
+    var texto1 = document.getElementById("texto1")
+    var texto2 = document.getElementById("texto2")
+    var copiartexto = ""
+    caja2.select();
+    document.execCommand("copy");
+    caja1.value= ""
+    caja2.value = ""
+    caja1.focus();
+}

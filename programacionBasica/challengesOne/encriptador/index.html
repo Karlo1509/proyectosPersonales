@@ -26,13 +26,20 @@
     </header>    
     <main>
         <section class="principal">
-            <h2 id="texto1" class="titulo-principal">Desencriptado</h2>
+            <div class="titulo-principal">
+                <h2 id="texto1">Desencriptado</h2>
+            </div>
+            
             <div id="intercambiar"><img src="imagenes/intercambiar.svg" alt="Intercambiar" class="intercambiar"></div>
-            <h2 id="texto2" class="titulo-principal">Encriptado</h2>
+
+            <div class="titulo-principal">
+                <h2 id="texto2">Encriptado</h2>
+                <div id="copiar"><img src="imagenes/copiar.png" alt="copiar" class="copiar"></div>
+            </div>
         </section>
         <section class="panel">
             <textarea id="caja1" cols="30" rows="10" autocapitalize="none" required placeholder="Escribe el texto aquí"></textarea>
-            <textarea id="caja2" cols="30" rows="10"  autocapitalize="none" required placeholder="Ningun texto fue encontrado, ingresa el texto que deseas encriptar o desencriptar" ></textarea>
+            <textarea id="caja2" cols="30" rows="10" readonly="readonly" autocapitalize="none" required placeholder="Ningun texto fue encontrado, ingresa el texto que deseas encriptar o desencriptar" ></textarea>
         </section>
         <p>&#9888 Solo letras minúsculas y sin acentos.</p>
     </main>  
