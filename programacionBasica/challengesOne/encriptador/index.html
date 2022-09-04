@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="imagenes/icono.png">
+    <script type="text/javascript" src="controlador.js"></script>
 </head>
 <body>
     <header>
@@ -25,13 +26,13 @@
     </header>    
     <main>
         <section class="principal">
-            <h2 class="titulo-principal">Desencriptado</h2>
+            <h2 id="texto1" class="titulo-principal">Desencriptado</h2>
             <img src="imagenes/intercambiar.svg" alt="Intercambiar" class="intercambiar">
-            <h2 class="titulo-principal">Encriptado</h2>
+            <h2 id="texto2" class="titulo-principal">Encriptado</h2>
         </section>
         <section class="panel">
-            <textarea name="mensajeencriptado" cols="30" rows="10" autocapitalize="none" required placeholder="Escribe el texto aquí"></textarea>
-            <textarea name="mensajedesencriptado" cols="30" rows="10" readonly="readonly" autocapitalize="none" required placeholder="Ningun texto fue encontrado, ingresa el texto que deseas encriptar o desencriptar" ></textarea>
+            <textarea id="caja1" cols="30" rows="10" autocapitalize="none" required placeholder="Escribe el texto aquí"></textarea>
+            <textarea id="caja2" cols="30" rows="10"  autocapitalize="none" required placeholder="Ningun texto fue encontrado, ingresa el texto que deseas encriptar o desencriptar" ></textarea>
         </section>
         <p>&#9888 Solo letras minúsculas y sin acentos.</p>
     </main>  
