@@ -28,57 +28,25 @@ function actualizar() {
 
 function encriptar(){
     var caja1 = document.getElementById("caja1")
-    var resultado = ""
-
-    for(var i = 0; i < caja1.value.length; i++){
-        if(caja1.value[i] != "a" 
-        && caja1.value[i] != "e" 
-        && caja1.value[i] != "i"
-        && caja1.value[i] != "o" 
-        && caja1.value[i] != "u")
-        {resultado = resultado + caja1.value[i];}
-        else {
-        if(caja1.value[i]=="e"){resultado = resultado + "enter"}
-        if(caja1.value[i]=="i"){resultado = resultado + "imes"}
-        if(caja1.value[i]=="a"){resultado = resultado + "ai"}
-        if(caja1.value[i]=="o"){resultado = resultado + "ober"}
-        if(caja1.value[i]=="u"){resultado = resultado + "ufat"}}
+    resultado = caja1.value
+    let matriz = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
+    for( i = 0; i < matriz.length;i++){
+        if(resultado.includes(matriz[i][0])){
+            console.log("yeap")
+            resultado=resultado.replaceAll(matriz[i][0],matriz[i][1]);
+        }
     }
     return resultado
 }
 
 function desencriptar(){
     var caja1 = document.getElementById("caja1")
-    var resultado = ""
-
-    for(var i = 0; i < caja1.value.length; i++){
-        if(caja1.value[i] != "a" 
-        && caja1.value[i] != "e" 
-        && caja1.value[i] != "i"
-        && caja1.value[i] != "o" 
-        && caja1.value[i] != "u")
-        {resultado = resultado + caja1.value[i];}
-        else {
-        if(caja1.value[i]=="e"){
-            resultado = resultado + "e";
-            i = i + 4 ;
-        }
-        if(caja1.value[i]=="i"){
-            resultado = resultado + "i";
-            i = i + 3 ;
-        }
-        if(caja1.value[i]=="a"){
-            resultado = resultado + "a";
-            i = i + 1 ;
-        }
-        if(caja1.value[i]=="o"){
-            resultado = resultado + "o";
-            i = i + 3 ;
-        }
-        if(caja1.value[i]=="u"){
-            resultado = resultado + "u";
-            i = i + 3 ;
-        }
+    resultado = caja1.value
+    let matriz = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
+    for( i = 0; i < matriz.length;i++){
+        if(resultado.includes(matriz[i][1])){
+            console.log("yeap")
+            resultado=resultado.replaceAll(matriz[i][1],matriz[i][0]);
         }
     }
     return resultado
